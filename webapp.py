@@ -9,8 +9,10 @@ import time
 import math
 import numpy as np
 
-# Ensure compatibility for different OS
-pathlib.Path = pathlib.WindowsPath if os.name == 'nt' else pathlib.PosixPath
+from pathlib import Path
+
+model_path = Path('models/best.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path, force_reload=True)
 
 st.set_page_config(layout="wide")
 
