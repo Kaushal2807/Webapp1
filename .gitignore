@@ -1,0 +1,6 @@
+/venv
+/detectron2
+/__pycache__
+.env
+# Ignore Jupyter Notebook files
+*.ipynb
