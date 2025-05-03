@@ -9,8 +9,8 @@ import time
 import math
 import numpy as np
 
-# Ensure compatibility for different OS
-pathlib.Path = pathlib.WindowsPath if os.name == 'nt' else pathlib.PosixPath
+# FIX: Don't modify the pathlib.Path class, just use the appropriate Path for the OS
+# REMOVED: pathlib.Path = pathlib.WindowsPath if os.name == 'nt' else pathlib.PosixPath
 
 st.set_page_config(layout="wide")
 
