@@ -10,7 +10,16 @@ import math
 import numpy as np
 
 # Ensure compatibility for different OS
-pathlib.Path = pathlib.WindowsPath if os.name == 'nt' else pathlib.PosixPath
+# pathlib.Path = pathlib.WindowsPath if os.name == 'nt' else pathlib.PosixPath
+
+from pathlib import Path
+
+cfg_model_path = Path('models/best.pt')  # Keep it platform-independent
+
+# Example model loading depending on what you're using:
+from ultralytics import YOLO
+model = YOLO(cfg_model_path)
+
 
 st.set_page_config(layout="wide")
 
